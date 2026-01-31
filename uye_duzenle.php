@@ -15,6 +15,8 @@ mysqli_stmt_bind_param($stmt, 'i', $uye_id);
 mysqli_stmt_execute($stmt);
 mysqli_stmt_bind_result($stmt, $kadi, $adsoy, $email);
 mysqli_stmt_fetch($stmt);
+mysqli_stmt_free_result($stmt);
+mysqli_stmt_close($stmt);
 
 // Koşul kontrolü
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {

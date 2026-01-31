@@ -33,6 +33,9 @@ Proje geliştirilirken aşağıdaki teknolojiler kullanılmıştır:
 ### 📝 Üye Kayıt
 ![Üye Kayıt](screenshots/uye_kayit_ekrani.png)
 
+### ✏️ Kitabı Düzenle
+![Kitabı Düzenle](screenshots/kitap_duzenle.png)
+
 ## ⚙️ Kurulum
 1.  Veritabanı sunucunuzda (MySQL) `kitap_sistemi` adında bir veritabanı oluşturun.
 2.  Proje klasöründeki `kitap_sistemi.sql` dosyasını bu veritabanına içe aktarın (import).

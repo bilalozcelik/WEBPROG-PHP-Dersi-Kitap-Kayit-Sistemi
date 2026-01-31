@@ -15,7 +15,7 @@ CREATE TABLE IF NOT EXISTS kitaplar (
   uye_id INT NOT NULL,
   kitap_adi VARCHAR(150),
   yazar VARCHAR(150),
-  tarih DATE,
+  yayin_yili INT(4),
   created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
   FOREIGN KEY (uye_id) REFERENCES uyeler(id) ON DELETE CASCADE
 );
