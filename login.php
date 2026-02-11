@@ -24,7 +24,11 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
   // Prepared Statement (Hazırlanmış Sorgu) ile veritabanından kullanıcıyı ara
   // ? işareti parametre yerine kullanılır (SQL Injection'a karşı güvenli)
+<<<<<<< HEAD
   $stmt = mysqli_prepare($conn, "SELECT id, sifre FROM uyeler WHERE kullanici_adi = ?");
+=======
+  $stmt = mysqli_prepare($conn, "SELECT id, sifre, rol FROM uyeler WHERE kullanici_adi = ?");
+>>>>>>> 9637f3e (Admin yönetimi ve kullanıcı silme özellikleri eklendi)
 
   // Parametreyi sorguya bağla ('s' = string tipinde parametre)
   mysqli_stmt_bind_param($stmt, 's', $kullanici_adi);
@@ -32,8 +36,13 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
   // Sorguyu çalıştır
   mysqli_stmt_execute($stmt);
 
+<<<<<<< HEAD
   // Sonuçları değişkenlere bağla (id ve sifre sütunları)
   mysqli_stmt_bind_result($stmt, $id, $hash);
+=======
+  // Sonuçları değişkenlere bağla (id, sifre ve rol sütunları)
+  mysqli_stmt_bind_result($stmt, $id, $hash, $rol);
+>>>>>>> 9637f3e (Admin yönetimi ve kullanıcı silme özellikleri eklendi)
 
   // Eğer kullanıcı bulunduysa (mysqli_stmt_fetch() = bir satır getir)
   if (mysqli_stmt_fetch($stmt)) {
@@ -42,9 +51,16 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     // Bu fonksiyon güvenli şifre kontrolü yapar
     if (password_verify($sifre, $hash)) {
 
+<<<<<<< HEAD
       // Şifre doğruysa, kullanıcı ID'sini oturuma kaydet
       // Artık kullanıcı giriş yapmış sayılır
       $_SESSION['uye_id'] = $id;
+=======
+      // Şifre doğruysa, kullanıcı ID'sini ve rolünü oturuma kaydet
+      // Artık kullanıcı giriş yapmış sayılır
+      $_SESSION['uye_id'] = $id;
+      $_SESSION['rol'] = $rol;
+>>>>>>> 9637f3e (Admin yönetimi ve kullanıcı silme özellikleri eklendi)
 
       // Ana sayfaya yönlendir
       header('Location: index.php');

@@ -50,6 +50,16 @@ if (session_status() === PHP_SESSION_NONE) {
 
             <li class="nav-item"><a class="nav-link" href="index.php">Kitaplarım</a></li>
             <li class="nav-item"><a class="nav-link" href="kitap_ekle.php">Kitap Ekle</a></li>
+<<<<<<< HEAD
+=======
+
+            <?php if (isset($_SESSION['rol']) && $_SESSION['rol'] == 1): ?>
+              <!-- SADECE ADMİN GÖREBİLİR -->
+              <li class="nav-item"><a class="nav-link fw-bold text-primary" href="admin_kullanicilar.php">Kullanıcı
+                  Yönetimi</a></li>
+            <?php endif; ?>
+
+>>>>>>> 9637f3e (Admin yönetimi ve kullanıcı silme özellikleri eklendi)
             <li class="nav-item"><a class="nav-link" href="uye_duzenle.php">Hesabım</a></li>
             <li class="nav-item"><a class="nav-link text-danger" href="logout.php">Çıkış</a></li>
 

@@ -7,6 +7,10 @@ CREATE TABLE IF NOT EXISTS uyeler (
   ad_soyad VARCHAR(100),
   email VARCHAR(100),
   sifre VARCHAR(255) NOT NULL,
+<<<<<<< HEAD
+=======
+  rol INT DEFAULT 0, -- 0: Kullanıcı, 1: Admin
+>>>>>>> 9637f3e (Admin yönetimi ve kullanıcı silme özellikleri eklendi)
   created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
 
