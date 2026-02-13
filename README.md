@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # Kitap Kayıt Sistemi 📚
 
 Bu proje, kullanıcıların kendi kitap listelerini oluşturmalarına, yeni kitaplar eklemelerine ve mevcut kitaplarını yönetmelerine olanak tanıyan web tabanlı bir **Kitap Yönetim Sistemi**dir.
@@ -19,6 +18,7 @@ Proje geliştirilirken aşağıdaki teknolojiler kullanılmıştır:
 3.  **Kitap Ekleme (kitap_ekle.php):** Koleksiyona yeni kitap bilgilerinin (ad, yazar, tür vb.) girildiği alan.
 4.  **Düzenleme ve Silme (kitap_duzenle.php, kitap_sil.php):** Mevcut kitap bilgilerini güncelleme veya listeden kaldırma işlemleri.
 5.  **Profil Yönetimi (uye_duzenle.php):** Kullanıcı bilgilerinin güncellenebildiği bölüm.
+6.  **Admin Yönetimi (admin_kullanicilar.php):** Sistemdeki kullanıcıların yönetildiği admin alanı.
 
 ## 📸 Ekran Görüntüleri
 
@@ -42,12 +42,5 @@ Proje geliştirilirken aşağıdaki teknolojiler kullanılmıştır:
 2.  Proje klasöründeki `kitap_sistemi.sql` dosyasını bu veritabanına içe aktarın (import).
 3.  `db.php` dosyasındaki veritabanı bağlantı bilgilerini kendi sunucu ayarlarınıza göre düzenleyin.
 4.  Projeyi bir PHP sunucusu (XAMPP, WAMP vb.) üzerinden çalıştırın.
-=======
-# Kitap Sistemi - Bootstrap 5
-Eğitim amaçlı PHP + MySQL proje.
-Çalıştırmak için:
-1. XAMPP'ı başlatın (Apache + MySQL).
-2. `kitap_sistemi.sql` dosyasını phpMyAdmin ile içe aktarın.
-3. Klasörü `C:/xampp/htdocs/kitap_sistemi` (veya benzeri) içine kopyalayın.
-4. Tarayıcıda `http://localhost/kitap_sistemi/login.php` adresini açın.
->>>>>>> 9637f3e (Admin yönetimi ve kullanıcı silme özellikleri eklendi)
+5.  Tarayıcıda `http://localhost/kitap_sistemi/login.php` adresini açın.
+
